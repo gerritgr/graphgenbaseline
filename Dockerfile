@@ -14,8 +14,7 @@ RUN pip install torch-scatter torch-sparse torch-cluster torch-spline-conv torch
 RUN cd DiGress/src/analysis/orca && g++ -O2 -std=c++11 -o orca orca.cpp
 RUN pip install git+https://github.com/igor-krawczuk/mini-moses
 
-RUN cd DiGress/
-RUN pip install -e .
+RUN cd DiGress && pip install -e .
 
 
 # ADD src/analysis /workspace/analysis
