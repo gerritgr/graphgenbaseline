@@ -13,15 +13,16 @@ RUN pip install torch-scatter torch-sparse torch-cluster torch-spline-conv torch
 #RUN pip install pyyaml && pip install overrides imageio numpy scipy tqdm wandb hydra-core #&&
 
 RUN cd DiGress/
-
-
-ADD src/analysis /workspace/analysis
-ADD configs /workspace/configs
-ADD src/diffusion /workspace/diffusion
-ADD src/models /workspace/models
-ADD ./data/qm9/qm9_pyg /workspace/data/qm9/qm9_pyg
-ADD *.py /workspace/
 RUN pip install -e .
+
+
+# ADD src/analysis /workspace/analysis
+# ADD configs /workspace/configs
+# ADD src/diffusion /workspace/diffusion
+# ADD src/models /workspace/models
+# ADD ./data/qm9/qm9_pyg /workspace/data/qm9/qm9_pyg
+# ADD *.py /workspace/
+
 # expects you to to run the image with `docker run -e WANDB_API_KEY=$YOUR_API_KEY graphgendiff:latest`
 # CMD python main.py
 
