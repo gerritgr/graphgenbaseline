@@ -2,7 +2,7 @@ FROM jupyter/datascience-notebook
 MAINTAINER "GGX"
 
 RUN git clone https://github.com/cvignac/DiGress
-RUN cd DiGress
+
 
 RUN conda update -n base -y conda && conda install -n base -c conda-forge -y mamba #&&
 RUN conda install -n base -c conda-forge graph-tool #&&
@@ -11,6 +11,10 @@ RUN pip install pyyaml && pip install overrides imageio numpy scipy tqdm wandb h
 RUN pip install pytorch_lightning==1.6  torchmetrics torch==1.11 torchvision  --extra-index-url https://download.pytorch.org/whl/cu113 #&&
 RUN pip install torch-scatter torch-sparse torch-cluster torch-spline-conv torch-geometric -f https://data.pyg.org/whl/torch-1.11.0+cu113.html
 #RUN pip install pyyaml && pip install overrides imageio numpy scipy tqdm wandb hydra-core #&&
+
+RUN cd DiGress/
+
+
 ADD src/analysis /workspace/analysis
 ADD configs /workspace/configs
 ADD src/diffusion /workspace/diffusion
