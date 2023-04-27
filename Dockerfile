@@ -11,7 +11,7 @@ RUN pip install pyyaml && pip install overrides imageio numpy scipy tqdm wandb h
 RUN pip install pytorch_lightning==1.6  torchmetrics torch==1.11 torchvision  --extra-index-url https://download.pytorch.org/whl/cu113 #&&
 RUN pip install torch-scatter torch-sparse torch-cluster torch-spline-conv torch-geometric -f https://data.pyg.org/whl/torch-1.11.0+cu113.html
 #RUN pip install pyyaml && pip install overrides imageio numpy scipy tqdm wandb hydra-core #&&
-RUN cd DiGress/src/analysis/orca g++ -O2 -std=c++11 -o orca orca.cpp
+RUN cd DiGress/src/analysis/orca && g++ -O2 -std=c++11 -o orca orca.cpp
 RUN pip install git+https://github.com/igor-krawczuk/mini-moses
 
 RUN cd DiGress/
