@@ -25,7 +25,7 @@ RUN cd DiGress && pip install -e .
 # ADD *.py /workspace/
 
 # expects you to to run the image with `docker run -e WANDB_API_KEY=$YOUR_API_KEY graphgendiff:latest`
-# CMD python main.py
+CMD python main.py
 
 
 
