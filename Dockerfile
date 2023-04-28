@@ -16,6 +16,10 @@ RUN pip install git+https://github.com/igor-krawczuk/mini-moses
 
 RUN cd DiGress && pip install -e .
 
+RUN pip install torch==1.13.0 torchvision
+RUN pip install torch-scatter
+RUN pip install torch-sparse
+
 
 # ADD src/analysis /workspace/analysis
 # ADD configs /workspace/configs
