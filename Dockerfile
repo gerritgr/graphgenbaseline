@@ -22,12 +22,11 @@ RUN pip install torch-sparse
 
 RUN mamba clean -a
 
-RUN conda install -c anaconda ipykernel
-RUN git clone https://github.com/KarolisMart/SPECTRE.git && rm -rf SPECTRE/.git
-RUN cd SPECTRE && mamba env create -f environment.yml
-RUN python -m ipykernel install --user --name=SPECTRE
-
-RUN mamba clean -a
+#RUN conda install -c anaconda ipykernel
+#RUN git clone https://github.com/KarolisMart/SPECTRE.git && rm -rf SPECTRE/.git
+#RUN cd SPECTRE && mamba env create -f environment.yml
+#RUN python -m ipykernel install --user --name=SPECTRE
+#RUN mamba clean -a
 
 # ADD src/analysis /workspace/analysis
 # ADD configs /workspace/configs
