@@ -21,6 +21,9 @@ RUN pip install torch-scatter
 RUN pip install torch-sparse
 
 
+RUN git clone https://github.com/KarolisMart/SPECTRE.git && cd SPECTRE && conda env create -f environment.yml
+
+
 # ADD src/analysis /workspace/analysis
 # ADD configs /workspace/configs
 # ADD src/diffusion /workspace/diffusion
