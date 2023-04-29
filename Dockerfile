@@ -1,10 +1,10 @@
 FROM jupyter/datascience-notebook
 MAINTAINER "GGX"
 
-RUN git clone https://github.com/cvignac/DiGress
+RUN git clone https://github.com/cvignac/DiGress && rm -rf DiGress/.git
 
 
-RUN conda update -n base -y conda && conda install -n base -c conda-forge -y mamba #&&
+RUN conda update -n base -y conda && conda install -n base -c conda-forge -y mamba 
 RUN conda install -n base -c conda-forge graph-tool #&&
 RUN mamba  install -y rdkit #&& 
 RUN pip install pyyaml && pip install overrides imageio numpy scipy tqdm wandb hydra-core seaborn #&&
@@ -23,7 +23,7 @@ RUN pip install torch-sparse
 RUN mamba clean -a
 
 RUN conda install -c anaconda ipykernel
-RUN git clone https://github.com/KarolisMart/SPECTRE.git 
+RUN git clone https://github.com/KarolisMart/SPECTRE.git && rm -rf SPECTRE/.git
 RUN cd SPECTRE && mamba env create -f environment.yml
 RUN python -m ipykernel install --user --name=SPECTRE
 
