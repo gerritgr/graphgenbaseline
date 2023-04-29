@@ -21,7 +21,9 @@ RUN pip install torch-scatter
 RUN pip install torch-sparse
 
 
+RUN conda install -c anaconda ipykernel
 RUN git clone https://github.com/KarolisMart/SPECTRE.git && cd SPECTRE && conda env create -f environment.yml
+RUN python -m ipykernel install --user --name=SPECTRE
 
 
 # ADD src/analysis /workspace/analysis
