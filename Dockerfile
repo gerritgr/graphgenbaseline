@@ -22,7 +22,8 @@ RUN pip install torch-sparse
 
 
 RUN conda install -c anaconda ipykernel
-RUN git clone https://github.com/KarolisMart/SPECTRE.git && cd SPECTRE && conda env create -f environment.yml
+RUN git clone https://github.com/KarolisMart/SPECTRE.git 
+RUN cd SPECTRE && mamba env create -f environment.yml
 RUN python -m ipykernel install --user --name=SPECTRE
 
 
