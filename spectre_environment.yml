@@ -4,9 +4,10 @@ channels:
   - pyg 
   - conda-forge
 dependencies:
-  - pip
   - python=3.9
+  - pip
   - pytorch=1.9.1
+  - mkl>=2018
   - cudatoolkit
   - numpy=1.21
   - pytorch-lightning=1.5
