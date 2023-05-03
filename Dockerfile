@@ -6,8 +6,10 @@ RUN git clone https://github.com/KarolisMart/SPECTRE.git && rm -rf SPECTRE/.git
 # Install mamba
 RUN conda install mamba -n base -c conda-forge
 
+RUN git clone https://github.com/gerritgr/graphgenbaseline.git
+
 # Install env
-RUN mamba env update -n base -f spectre_environment.yml && \
+RUN mamba env update -n base -f graphgenbaseline/spectre_environment.yml && \
     mamba clean -ya
 
 
