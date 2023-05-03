@@ -7,7 +7,7 @@ RUN git clone https://github.com/KarolisMart/SPECTRE.git && rm -rf SPECTRE/.git
 RUN conda install mamba -n base -c conda-forge
 
 # Install env
-RUN mamba env update -n base -f /app/SPECTRE/environment.yml && \
+RUN mamba env update -n base -f /SPECTRE/environment.yml && \
     mamba clean -ya
 
 
