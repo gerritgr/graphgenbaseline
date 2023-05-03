@@ -19,7 +19,7 @@ dependencies:
   - tensorboard=2.6
   - pyemd
   - graph-tool # Only available for linux/osx - needed to estimate SBM validity
-  - rdkit=2021.9.3
+  - rdkit
   - pip:
     - torch-householder
     - pygsp
