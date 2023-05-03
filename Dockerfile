@@ -2,9 +2,19 @@ FROM jupyter/datascience-notebook
 MAINTAINER "GGX"
 
 RUN git clone https://github.com/KarolisMart/SPECTRE.git && rm -rf SPECTRE/.git
-RUN cd SPECTRE && mamba env create -f environment.yml
-RUN python -m ipykernel install --user --name=SPECTRE
-RUN mamba clean -a
+
+# Install mamba
+RUN conda install mamba -n base -c conda-forge
+  
+# Install env
+RUN mamba env update -n base -f SPECTRE/environment.yml 
+RUN mamba clean -ya
+
+
+
+
+# RUN python -m ipykernel install --user --name=SPECTRE
+# RUN mamba clean -a
 
 # ADD src/analysis /workspace/analysis
 # ADD configs /workspace/configs
