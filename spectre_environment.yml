@@ -7,7 +7,7 @@ dependencies:
   - python=3.9
   - pip
   - pytorch=1.9.1
-  - mkl>=2018
+  - mkl
   - cudatoolkit
   - numpy=1.21
   - pytorch-lightning=1.5
@@ -17,7 +17,7 @@ dependencies:
   - jupyter
   - scipy
   - pyg=2.0
-  - tensorboard=2.6
+  - tensorboard
   - pyemd
   - graph-tool # Only available for linux/osx - needed to estimate SBM validity
   - rdkit
