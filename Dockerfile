@@ -1,7 +1,6 @@
 FROM jupyter/datascience-notebook
 LABEL maintainer="GGX"
 
-WORKDIR /app
 RUN git clone https://github.com/KarolisMart/SPECTRE.git && rm -rf SPECTRE/.git
 
 # Install mamba
@@ -12,6 +11,8 @@ RUN mamba env update -n base -f /app/SPECTRE/environment.yml && \
     mamba clean -ya
 
 
+# RUN cd SPECTRE && conda env update -n base -f environment.yml
+RUN conda install matplotlib=3.1.3 numpy=1.18.1 networkx=2.4 --yes --force-reinstall
 
 # compile with (within the folder of Dockerfile):  docker build -t gerritgr/graphgenbaseline . (replace gerritgr with your username)
 # start with: docker run -p 10000:8888 gerritgr/graphgenbaseline   # at my PC the default port doesn't work
