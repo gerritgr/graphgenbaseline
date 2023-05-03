@@ -6,8 +6,8 @@ channels:
 dependencies:
   - pip
   - python=3.9
-  - cudatoolkit=11.1
   - pytorch=1.9.1
+  - cudatoolkit
   - numpy=1.21
   - pytorch-lightning=1.5
   - networkx=2.6
