@@ -3,10 +3,11 @@ channels:
   - pytorch
   - pyg 
   - conda-forge
+  - defaults
 dependencies:
   - python=3.9.10
   - pytorch=1.9.0
-  - cudatoolkit=11.1
+  - cudatoolkit=11.1.1
   - numpy=1.20.3
   - pytorch-lightning=1.4.9
   - networkx=2.6.3
@@ -14,12 +15,11 @@ dependencies:
   - matplotlib=3.4.2
   - jupyter=1.0.0
   - scipy=1.6.3
-  - pyg=2.0.1
+  - pyg=1.7.0
   - tensorboard=2.4.1
   - pyemd=0.5.1
-  - graph-tool=2.38
-  - rdkit=2020.09.5
   - pip:
     - torch-householder==0.1.1
     - pygsp==0.5.1
     - torch-ema==1.2.1
+  - conda-forge::rdkit=2021.03.1
