@@ -4,24 +4,22 @@ channels:
   - pyg 
   - conda-forge
 dependencies:
-  - python=3.9.0
-  - pip
-  - pytorch
-  - mkl
-  - cudatoolkit
-  - numpy
-  - pytorch-lightning
-  - networkx=2.6
-  - pyyaml
-  - matplotlib
-  - jupyter
-  - scipy
-  - pyg
-  - tensorboard
-  - pyemd
-  - graph-tool # Only available for linux/osx - needed to estimate SBM validity
-  - rdkit
+  - python=3.9.10
+  - pytorch=1.9.0
+  - cudatoolkit=11.1
+  - numpy=1.20.3
+  - pytorch-lightning=1.4.9
+  - networkx=2.6.3
+  - pyyaml=5.4.1
+  - matplotlib=3.4.2
+  - jupyter=1.0.0
+  - scipy=1.6.3
+  - pyg=2.0.1
+  - tensorboard=2.4.1
+  - pyemd=0.5.1
+  - graph-tool=2.38
+  - rdkit=2020.09.5
   - pip:
-    - torch-householder
-    - pygsp
-    - torch-ema
+    - torch-householder==0.1.1
+    - pygsp==0.5.1
+    - torch-ema==1.2.1
