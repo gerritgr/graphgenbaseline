@@ -13,6 +13,12 @@ RUN mamba env create  -f graphgenbaseline/spectre_environment.yml && \
     mamba clean -ya
 
 
+
+RUN conda activate SPECTRE
+RUN conda config --set envs_dirs $(conda info --base)/envs
+RUN conda config --set default_env SPECTRE
+RUN conda deactivate
+
 # RUN cd SPECTRE && conda env update -n base -f environment.yml
 # RUN conda install matplotlib=3.1.3 numpy=1.18.1 networkx=2.4 --yes --force-reinstall
 
