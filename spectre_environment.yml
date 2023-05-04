@@ -11,16 +11,16 @@ dependencies:
   - numpy=1.20.3
   - pytorch-lightning=1.4.9
   - networkx=2.6.3
-  - pyyaml=5.4.1
+  - pyyaml
   - matplotlib=3.4.2
-  - jupyter=1.0.0
+  - jupyter
   - scipy
   - pyg
-  - tensorboard=2.4.1
-  - pyemd=0.5.1
+  - tensorboard
+  - pyemd
   - graph-tool
   - pip:
-    - torch-householder==0.1.1
-    - pygsp==0.5.1
-    - torch-ema==1.2.1
+    - torch-householder
+    - pygsp
+    - torch-ema
   - conda-forge::rdkit=2021.03.1
