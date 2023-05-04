@@ -12,7 +12,7 @@ RUN git clone https://github.com/gerritgr/graphgenbaseline.git
 RUN mamba env create  -f graphgenbaseline/spectre_environment.yml && \
     mamba clean -ya
 
-
+RUN conda init bash
 
 RUN conda activate SPECTRE
 RUN conda config --set envs_dirs $(conda info --base)/envs
