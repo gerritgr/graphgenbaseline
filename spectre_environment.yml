@@ -4,7 +4,7 @@ channels:
   - pyg 
   - conda-forge
 dependencies:
-  - python=3.0
+  - python=3.9
   - pip
   - pytorch
   - mkl
@@ -16,7 +16,7 @@ dependencies:
   - matplotlib
   - jupyter
   - scipy
-  - pyg=2.0
+  - pyg
   - tensorboard
   - pyemd
   - graph-tool # Only available for linux/osx - needed to estimate SBM validity
