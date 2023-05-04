@@ -4,7 +4,7 @@ channels:
   - pyg 
   - conda-forge
 dependencies:
-  - python=3.9
+  - python=3.9.0
   - pip
   - pytorch
   - mkl
