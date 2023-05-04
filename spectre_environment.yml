@@ -14,7 +14,7 @@ dependencies:
   - pyyaml=5.4.1
   - matplotlib=3.4.2
   - jupyter=1.0.0
-  - scipy=1.6.3
+  - scipy
   - pyg
   - tensorboard=2.4.1
   - pyemd=0.5.1
