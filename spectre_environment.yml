@@ -10,7 +10,7 @@ dependencies:
   - pytorch=1.9.0
   - cudatoolkit
   - numpy=1.20.3
-  - pytorch-lightning=1.4.9
+  - pytorch-lightning=1.5
   - networkx=2.6.3
   - pyyaml
   - matplotlib=3.4.2
