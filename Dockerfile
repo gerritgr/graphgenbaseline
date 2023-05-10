@@ -15,6 +15,8 @@ RUN mamba env create  -f SPECTRE/environment.yml && \
     mamba clean -ya
 
 RUN conda init bash
+RUN conda init zsh
+RUN eval "$(conda shell.bash hook)"
 
 
 
