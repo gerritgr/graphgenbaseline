@@ -3,8 +3,7 @@ LABEL maintainer="GGX"
 
 RUN git clone https://github.com/KarolisMart/SPECTRE.git && rm -rf SPECTRE/.git
 
-RUN apt-get update && \
-    apt-get install -y python3.9
+# RUN apt-get update && apt-get install software-properties-common && add-apt-repository ppa:deadsnakes/ppa && apt-get install python3.9 && apt-get install python3-pip
 
 # Install mamba
 RUN conda install mamba -n base -c conda-forge
