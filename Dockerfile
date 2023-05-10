@@ -20,8 +20,8 @@ RUN conda init bash
 RUN conda init zsh
 RUN eval "$(conda shell.bash hook)"
 
-RUN mamba env update -n base -f SPECTRE/environment.yml && \
-    mamba clean -ya
+# RUN mamba env update -n base -f SPECTRE/environment.yml && \
+#     mamba clean -ya
 
 
 RUN conda install -c anaconda ipykernel && python -m ipykernel install --user --name=SPECTRE
