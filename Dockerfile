@@ -12,10 +12,10 @@ RUN conda install mamba -n base -c conda-forge
 RUN git clone https://github.com/gerritgr/graphgenbaseline.git
 
 # Install env
-#RUN mamba env create  -f graphgenbaseline/spectre_environment.yml && \
-#    mamba clean -ya
-RUN mamba env create  -f SPECTRE/environment.yml && \
+RUN mamba env create  -f graphgenbaseline/spectre_environment.yml && \
     mamba clean -ya
+#RUN mamba env create  -f SPECTRE/environment.yml && \
+#    mamba clean -ya
 
 RUN conda init bash
 RUN conda init zsh
