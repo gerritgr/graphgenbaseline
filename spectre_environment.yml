@@ -11,7 +11,7 @@ dependencies:
   - cudatoolkit
   - numpy=1.20.3
   - pytorch-lightning=1.5
-  - networkx=2.6.3
+  - networkx=2.4
   - pyyaml
   - matplotlib=3.4.2
   - jupyter
