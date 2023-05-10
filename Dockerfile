@@ -3,7 +3,7 @@ LABEL maintainer="GGX"
 
 RUN git clone https://github.com/KarolisMart/SPECTRE.git && rm -rf SPECTRE/.git
 
-RUN RUN apt-get update && \
+RUN apt-get update && \
     apt-get install -y python3.9
 
 # Install mamba
